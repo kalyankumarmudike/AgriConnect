@@ -1,0 +1,33 @@
+
+.layout {
+  min-height: 100vh;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.ant-menu-item a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.ant-menu-item a:hover {
+  color: inherit !important;
+}
+
+.content-container {
+  padding: 24px;
+  min-height: calc(100vh - 134px);
+}

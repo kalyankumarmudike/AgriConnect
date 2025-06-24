@@ -1,0 +1,8 @@
+export const soilTypes = ["acidic","alkaline","alluvial","chalky","clay","clay loam","gravelly loam","laterite","loamy","peaty","red","saline","sandy","sandy clay","sandy clay loam","sandy loam","silty","silty clay","silty clay loam","silt loam",
+];
+
+export const previousCrops = ["bajra","barley","black gram","cassava","castor","chickpea","chilli","coriander","cotton","cumin","fallow","fenugreek","finger millet","garlic","ginger","groundnut","green gram","jowar","lentil","linseed","maize","mustard","niger","okra","onion","pearl millet","pigeon pea","potato","pulses","ragi","rice","sesame","sorghum","soybean","sugarcane","sunflower","sweet potato","tobacco","turmeric","vegetables (mixed)","wheat",
+];
+
+export const commonCrops = ["amaranth leaves (chaulai)","arecanut","bajra","banana","barley","beetroot","bitter gourd","black gram","bottle gourd","brinjal","cabbage","carrot","cassava","castor","cauliflower","chickpea","chilli","citrus fruits (orange, lemon, lime)","cloves","coconut","coffee","coriander","cotton","cucumber","cumin","fenugreek","fenugreek leaves (methi)","finger millet","garlic","ginger","grapes","green gram","groundnut","guava","jowar","lentil","linseed","maize","mango","muskmelon","mustard","niger","okra","onion","papaya","pearl millet","pepper","pigeon pea","potato","pumpkin","pulses","ragi","radish","rice","ridge gourd","rubber","sesame","sorghum","soybean","spices (cardamom, pepper, cloves)","spinach","sugarcane","sunflower","sweet potato","tea","tobacco","tomato","turmeric","watermelon","wheat",
+];

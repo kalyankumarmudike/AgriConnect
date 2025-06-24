@@ -1,0 +1,314 @@
+/* Weather Component - Refined Theme
+ * Designed to complement a green gradient hero container
+ * Uses a clean, neutral color scheme with subtle accents
+ */
+
+ :root {
+    /* Color variables */
+    --primary-green: #259700;
+    --light-green: #6af06f;
+    --neutral-bg: #ffffff;
+    --neutral-bg-hover: #f9f9f9;
+    --text-dark: #2d3748;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --accent-yellow: #fbbf24;
+    --accent-blue: #3b82f6;
+    --accent-teal: #14b8a6;
+    --accent-red: #ef4444;
+    
+    /* Layout variables */
+    --card-radius: 12px;
+    --icon-radius: 10px;
+    --border-radius-sm: 6px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition-smooth: all 0.2s ease-in-out;
+  }
+  
+  /* Weather Container - Main wrapper */
+  .weather-container {
+    padding: 1.5rem;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Weather Section Title */
+  .weather-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .weather-section-title svg {
+    color: var(--primary-green);
+  }
+  
+  /* Weather Header - Location & Time */
+  .weather-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .weather-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .location-info {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .location-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .location-icon {
+    color: var(--primary-green);
+  }
+  
+  .date {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin: 0.25rem 0 0;
+  }
+  
+  /* Temperature Display */
+  .temperature-display {
+    text-align: right;
+    min-width: 120px;
+  }
+  
+  .temperature {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
+  .degree-unit {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+  }
+  
+  .description {
+    color: var(--text-medium);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0.25rem 0 0;
+  }
+  
+  /* Weather Attributes Grid with Cards */
+  .weather-attributes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  @media (min-width: 480px) {
+    .weather-attributes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .weather-attributes {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Individual Attribute Card */
+  .attribute-card {
+    /* background-color: var(--neutral-bg);
+     */
+    background-color: #C6F6C7;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition-smooth);
+  }
+  
+  .attribute-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+    /* background-color: var(--neutral-bg-hover); */
+    background-color: #9AD497;
+  }
+  
+  /* Icon Container */
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--icon-radius);
+    margin-bottom: 0.75rem;
+  }
+  
+  .feels-like-container {
+    background-color: rgba(251, 191, 36, 0.1);
+  }
+  
+  .wind-container {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  .humidity-container {
+    background-color: rgba(20, 184, 166, 0.1);
+  }
+  
+  .temp-container {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  
+  /* Icon Styling */
+  .attribute-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .feels-like-icon {
+    color: var(--accent-yellow);
+  }
+  
+  .wind-icon {
+    color: var(--accent-blue);
+  }
+  
+  .humidity-icon {
+    color: var(--accent-teal);
+  }
+  
+  .temp-icon {
+    color: var(--accent-red);
+  }
+  
+  /* Attribute Text */
+  .attribute-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0.15rem 0;
+  }
+  
+  .attribute-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Weather Footer */
+  .weather-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .weather-condition {
+    display: flex;
+    align-items: center;
+  }
+  
+  .condition-indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+  }
+  
+  .condition-text {
+    font-size: 0.875rem;
+    color: var(--text-medium);
+    font-weight: 500;
+  }
+  
+  .update-time {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  /* Loading & Error States */
+  .weather-loading,
+  .weather-error {
+    padding: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 16rem;
+    background-color: var(--neutral-bg);
+    max-width: 600px;
+    margin: 1rem auto;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .loader-icon,
+  .error-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .loader-icon {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-text,
+  .error-message {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .error-details {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
